@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8f2c9840-ac30-400e-82c6-4d0f527d6a5a}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>start.cmd</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.10</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="frontend\index.html" />
+    <Content Include="frontend\public\favicon.ico" />
+    <Content Include="frontend\src\assets\Azure.svg" />
+    <Content Include="frontend\src\assets\Contoso.svg" />
+    <Content Include="frontend\src\assets\Send.svg" />
+    <Content Include="frontend\src\components\Answer\Answer.module.css" />
+    <Content Include="frontend\src\components\ChatHistory\ChatHistoryPanel.module.css" />
+    <Content Include="frontend\src\components\QuestionInput\QuestionInput.module.css" />
+    <Content Include="frontend\src\index.css" />
+    <Content Include="frontend\src\pages\chat\Chat.module.css" />
+    <Content Include="frontend\src\pages\layout\Layout.module.css" />
+    <Content Include="requirements-dev.txt" />
+    <Content Include="requirements.txt" />
+    <Content Include="static\assets\Contoso-ff70ad88.svg" />
+    <Content Include="static\assets\index-5e49c158.css" />
+    <Content Include="static\assets\index-87c2be60.js" />
+    <Content Include="static\assets\Send-d0601aaa.svg" />
+    <Content Include="static\favicon.ico" />
+    <Content Include="static\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app.py" />
+    <Compile Include="backend\auth\auth_utils.py" />
+    <Compile Include="backend\auth\sample_user.py" />
+    <Compile Include="backend\auth\__init__.py" />
+    <Compile Include="backend\history\cosmosdbservice.py" />
+    <Compile Include="scripts\auth_init.py" />
+    <Compile Include="scripts\auth_update.py" />
+    <Compile Include="scripts\chunk_documents.py" />
+    <Compile Include="scripts\cosmos_mongo_vcore_data_preparation.py" />
+    <Compile Include="scripts\data_preparation.py" />
+    <Compile Include="scripts\data_utils.py" />
+    <Compile Include="scripts\embed_documents.py" />
+    <Compile Include="scripts\prepdocs.py" />
+    <Compile Include="scripts\push_to_acs.py" />
+    <Compile Include="test_app.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="backend\" />
+    <Folder Include="backend\auth" />
+    <Folder Include="backend\history" />
+    <Folder Include="frontend" />
+    <Folder Include="frontend\public" />
+    <Folder Include="frontend\src" />
+    <Folder Include="frontend\src\assets" />
+    <Folder Include="frontend\src\components\" />
+    <Folder Include="frontend\src\components\Answer" />
+    <Folder Include="frontend\src\components\ChatHistory" />
+    <Folder Include="frontend\src\components\QuestionInput" />
+    <Folder Include="frontend\src\pages\" />
+    <Folder Include="frontend\src\pages\chat" />
+    <Folder Include="frontend\src\pages\layout" />
+    <Folder Include="scripts" />
+    <Folder Include="static" />
+    <Folder Include="static\assets" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.10" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

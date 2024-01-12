@@ -26,6 +26,7 @@
     overflow-y: auto;
     max-height: calc(100vh - 100px);
 }
+ 
 
 .chatEmptyState {
     flex-grow: 1;
@@ -61,8 +62,7 @@
 }
 
 .chatIcon {
-    height: 62px;
-    width: 62px;
+    width: 170px;
 }
 
 .chatMessageStream {
@@ -323,4 +323,20 @@ a {
 .viewSourceButton:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.footerTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 28px;
+    display: flex;
+    align-items: left;
+    color: #242424;
+	float:left;
+	text-decoration:none;
+}
+ a{
+	text-decoration: none;
+	text-align: left !important;
 }
